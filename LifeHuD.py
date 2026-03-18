@@ -95,14 +95,12 @@ def calculate_health(data):
 def main():
     data = load_data()
     
-    # --- NEW ADDITION: Asks for name on first run ---
     if data['profile']['name'] == "User":
         clear_screen()
         print("Welcome to LifeHUD")
         new_name = input("Please enter your name: ")
         data['profile']['name'] = new_name
         save_data(data)
-    # ------------------------------------------------
     
     while True:
         show_dashboard(data)
